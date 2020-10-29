@@ -52,7 +52,7 @@ executable haskell-forever-app
     , transformers
   default-language: Haskell2010
   main-is:
-      HaskellForever/IO/Main.hs
+      HaskellForever/Main.hs
 
 test-suite haskell-forever-test
   import:
