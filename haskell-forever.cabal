@@ -26,7 +26,15 @@ common globals
     MultiParamTypeClasses
     TemplateHaskell
 
-executable haskell-forever
+library
+  import:
+      globals
+  hs-source-dirs:
+      src
+  build-depends:
+  default-language: Haskell2010
+
+executable haskell-forever-app
   ghc-options:
       -rtsopts
       -with-rtsopts=+RTS
@@ -36,9 +44,11 @@ executable haskell-forever
   import:
       globals
   hs-source-dirs:
-      src
+      app
   build-depends:
       base >=4.7 && <5
+
+    , amazonka
     , transformers
   default-language: Haskell2010
   main-is:
